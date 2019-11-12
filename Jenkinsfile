@@ -8,7 +8,7 @@ pipeline
         {
             steps
             {
-                sh 'CMake .'
+                sh 'cmake .'
                 sh 'make'
             }
         }
