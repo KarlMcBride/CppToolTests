@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.7.2)
 set(CMAKE_CXX_STANDARD 11)
 
+set(ENV{PATH} $PATH:/usr/bin/make)
+
 project(CalcApp)
 
 add_library(CalcLib src/calculator.cpp)
