@@ -4,7 +4,7 @@
 class Calculator
 {
     public:
-        int AddTwoNumbers(const int _num1, const int _num2);
+        int AddTwoNumbers(int _num1, int _num2);
 };
 
 #endif // __CALCULATOR_HPP

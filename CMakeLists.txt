@@ -9,7 +9,7 @@ project(CalcApp)
 
 add_library(CalcLib src/calculator.cpp)
 
-target_include_directories(CalcLib PUBLIC "include")
+#target_include_directories(CalcLib PUBLIC "include")
 
 add_executable(calc_app src/main.cpp)
 
