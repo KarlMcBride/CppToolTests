@@ -4,7 +4,7 @@
 class Calculator
 {
     public:
-        int Calculator::AddTwoNumbers(const int _num1, const int _num2);
-}
+        int AddTwoNumbers(const int _num1, const int _num2);
+};
 
 #endif // __CALCULATOR_HPP
