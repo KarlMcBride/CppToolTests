@@ -8,8 +8,7 @@ pipeline
         {
             steps
             {
-                sh 'cmake .'
-                sh 'make'
+                sh './build_and_test.sh'
             }
         }
         stage('Test')
