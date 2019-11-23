@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "calculator.cpp"
+#include "calculator.hpp"
 
 TEST(CalcTest, AddTwoPositives)
 {

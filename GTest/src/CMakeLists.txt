@@ -7,10 +7,10 @@ set(CMAKE_CXX_COMPILER /usr/bin/g++)
 
 project(CalcApp)
 
-add_library(CalcLib src/calculator.cpp)
-
+add_library(CalcLib calculator.cpp)
+include_directories(.)
 #target_include_directories(CalcLib PUBLIC "include")
 
-add_executable(calc_app src/main.cpp)
+add_executable(calc_app.ex main.cpp)
 
-target_link_libraries(calc_app CalcLib)
+target_link_libraries(calc_app.ex CalcLib)

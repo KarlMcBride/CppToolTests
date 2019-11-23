@@ -7,9 +7,10 @@ set(PROJECT_ROOT_DIR /home/karlm/Desktop/git_repos/CMakeTest)
 # Locate GTest
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
+include_directories(../src/)
 
 # Link runTests with test files, GTest and pthread library
-add_executable(testExecutable calc_tests.cpp)
+add_executable(testExecutable calc_tests.cpp ../src/calculator.cpp)
 
 # Link project source files
 message("PROJECT_ROOT_DIR: ${PROJECT_ROOT_DIR}")
