@@ -8,14 +8,14 @@ pipeline
         {
             steps
             {
-                sh './build_and_test.sh'
+                sh './project_build.sh'
             }
         }
         stage('Test')
         {
             steps
             {
-                echo 'Testing... (dummy step)'
+                sh './project_test.sh'
             }
         }
     }
