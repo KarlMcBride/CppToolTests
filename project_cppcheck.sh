@@ -1,8 +1,8 @@
 #/bin/sh
 
 # Prerequisites
-sudo apt-get install python-pygments
-pip3 install htmlreport
+# sudo apt-get install python-pygments
+# pip3 install htmlreport
 
 outputDirectory=quality_reports
 xmlReportPath=${outputDirectory}/cppcheck-result.xml
@@ -22,4 +22,4 @@ cppcheck --enable=all --suppress=missingIncludeSystem --xml --xml-version=2 src 
 
 # Process xml output into HTML
 # Note: it generates a #.html file for each source file containing issues.
-cppcheck-htmlreport --title=${runDate} --file=${xmlReportPath} --report-dir=${outputDirectory}
+# cppcheck-htmlreport --title=${runDate} --file=${xmlReportPath} --report-dir=${outputDirectory}
