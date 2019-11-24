@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
 
+// Example flagged by cppclean, as it cannot find "calculator.hpp".
+// Using <calculator.hpp> or "../src/calculator.hpp" resolves this.
 #include "calculator.hpp"
 
 TEST(CalcTest, AddTwoPositives)

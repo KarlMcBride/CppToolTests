@@ -4,6 +4,13 @@ pipeline
 
     stages
     {
+        /*stage('CppClean')
+        {
+            steps
+            {
+                sh "./project_cppclean.sh || true"
+            }
+        }*/
         stage('Build')
         {
             steps
