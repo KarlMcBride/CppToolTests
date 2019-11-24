@@ -11,6 +11,13 @@ pipeline
                 sh "./project_cppclean.sh || true"
             }
         }*/
+        stage('CppCheck')
+        {
+            steps
+            {
+                sh "./project_cppcheck.sh"
+            }
+        }
         stage('Build')
         {
             steps
