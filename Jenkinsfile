@@ -16,6 +16,7 @@ pipeline
             steps
             {
                 sh "./project_cppcheck.sh"
+                publishCppcheck allowNoReport: true, ignoreBlankFiles: true, pattern: 'quality_reports/cppcheck-result.xml'
             }
         }
         stage('Build')
