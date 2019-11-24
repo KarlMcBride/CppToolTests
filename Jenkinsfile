@@ -17,15 +17,18 @@ pipeline
             {
                 sh "./project_cppcheck.sh"
                 //publishCppcheck allowNoReport: true, ignoreBlankFiles: true, pattern: 'quality_reports/cppcheck-result.xml'
-                publishHTML target:
-                [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: false,
-                    keepAll: true,
-                    reportDir: 'quality_reports',
-                    reportFiles: 'index',
-                    reportName: 'CppCheck'
-                ]
+
+                //publishHTML target:
+                //[
+                //    allowMissing: false,
+                //    alwaysLinkToLastBuild: false,
+                //    keepAll: true,
+                //    reportDir: 'quality_reports',
+                //    reportFiles: 'index',
+                //    reportName: 'CppCheck'
+                //]
+
+                junit 'quality_reports/cppcheck-result.xml'
             }
         }
         stage('Build')
