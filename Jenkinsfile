@@ -29,7 +29,7 @@ pipeline
                 //]
 
                 // publishCppcheck displayErrorSeverity: true, pattern: 'quality_reports/cppcheck-result.xml'
-                archiveArtifacts 'quality_reports/index.html'
+                archiveArtifacts 'quality_reports/*'
             }
         }
         stage('Build')
