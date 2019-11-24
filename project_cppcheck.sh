@@ -23,3 +23,5 @@ cppcheck --enable=all --suppress=missingIncludeSystem --xml --xml-version=2 src 
 # Process xml output into HTML
 # Note: it generates a #.html file for each source file containing issues.
 cppcheck-htmlreport --title=${runDate} --file=${xmlReportPath} --report-dir=${outputDirectory}
+# Strip out footer, as it overlaps the statistics hyperlink
+sed -i '/footer/,+7 d' ${outputDirectory}/index.html
