@@ -28,7 +28,8 @@ pipeline
                 //    reportName: 'CppCheck'
                 //]
 
-                publishCppcheck displayErrorSeverity: true, pattern: 'quality_reports/cppcheck-result.xml'
+                // publishCppcheck displayErrorSeverity: true, pattern: 'quality_reports/cppcheck-result.xml'
+                archiveArtifacts 'quality_reports/index.html'
             }
         }
         stage('Build')
