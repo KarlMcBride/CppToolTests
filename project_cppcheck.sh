@@ -5,7 +5,7 @@ sudo apt-get install python-pygments
 pip3 install htmlreport
 
 outputDirectory=quality_reports
-xmlReportPath=${outputDirectory}/report-src.xml
+xmlReportPath=${outputDirectory}/cppcheck-result.xml
 
 # Error out if cppcheck isn't present
 if ! [ -x "$(command -v cppcheck)" ]; then
