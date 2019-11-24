@@ -28,7 +28,7 @@ pipeline
                 //    reportName: 'CppCheck'
                 //]
 
-                junit 'quality_reports/cppcheck-result.xml'
+                publishCppcheck displayErrorSeverity: true, pattern: 'quality_reports/cppcheck-result.xml'
             }
         }
         stage('Build')
